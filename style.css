@@ -1,0 +1,753 @@
+/* Global Styles */
+body {
+    font-family: sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0; /* Light gray background */
+}
+
+a {
+    text-decoration: none; /* Remove underline from all links */
+}
+
+ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 20px; /* Space between list items */
+}
+
+h1, h2, p {
+    margin: 0.5em 0;
+}
+
+/* Header */
+header {
+    background-color: #fff; /* White background for header */
+    padding: 9px 0;
+    display: flex;
+    justify-content: space-between; /* Distributes space between the child elements */
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 1;
+}
+
+.logo img {
+    width: 90px;
+    height: 90px;
+}
+
+/* Navigation */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 0 30px;
+    background-color: #000000; /* Optional: set background color for nav */
+}
+
+nav .logo {
+    margin-right: auto; /* Pushes logo to the far left */
+}
+
+nav ul {
+    display: flex;
+    gap: 30px; /* Space between li items */
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    justify-content: center; /* Center the <ul> within the available space */
+    flex-grow: 1; /* Makes the <ul> grow and take available space */
+}
+
+nav ul li {
+    border-radius: 5px; /* Rounded corners for the li element */
+    padding: 10px 20px; /* Padding for better clickability */
+    transition: background-color 0.3s ease; /* Smooth background color transition */
+}
+
+/* Style for <a> tags inside <li> */
+nav ul li a {
+    color: #249F26;  /* Green text color */
+    text-decoration: none;  /* Remove underline */
+    font-size: 16px;
+    display: block; /* Makes the <a> fill the <li> */
+    padding: 10px 20px;  /* Add padding around the text */
+    border-radius: 5px; /* Rounded corners for the link */
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Hover effect for <a> inside <li> */
+nav ul li a:hover {
+    background-color: #FFBF00; /* Change background color on hover */
+    color: #000000;  /* Change text color on hover */
+}
+
+/* Button Styling */
+.btn, .btn-container button {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #000000;
+    color: #249F26;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, color 0.3s ease, transform 0.2s ease;
+}
+
+.btn:hover, .btn-container button:hover {
+    background-color: #FFBF00;
+    color: #000000;
+    transform: scale(1.05); /* Slight scale-up effect */
+}
+
+/* Modal Overlay */
+.modal-overlay {
+    display: none; /* Hidden by default */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+/* Modal Content */
+.modal-content {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    width: 100%;
+    max-width: 400px;
+    text-align: center;
+}
+.modal-content h2 {
+    font-size: 2rem;
+    color: #000;
+    margin-bottom: 20px;
+}
+.form-group {
+    margin-bottom: 20px;
+    text-align: left;
+}
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-size: 14px;
+    color: #333;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-top: 5px;
+}
+
+/* Close Button */
+.close-btn {
+    background-color: #FF0000;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 20px;
+    transition: background-color 0.3s ease;
+}
+
+.close-btn:hover {
+    background-color: #D30000;
+}
+
+/* Submit Button (same style as sign-up-btn) */
+.sign-up-btn {
+    background-color: #000000;
+    color: #249F26;
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease, transform 0.2s ease;
+}
+
+.sign-up-btn:hover {
+    background-color: #FFBF00;
+    color: #000000;
+    transform: scale(1.05);
+}
+
+/* Modal Overlay Hidden by Default */
+.modal-overlay {
+    display: none; /* Modal hidden */
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    justify-content: center;
+    align-items: center;
+}
+.modal-overlay.show {
+    display: flex; /* Modal is now visible */
+}
+/* Modal content styling */
+.modal-content {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    width: 300px;
+    text-align: center;
+}
+
+
+
+/* Hero Section */
+.hero {
+    position: relative;
+    background-image: url('assets/Skyhy_background1.png');
+    background-size: cover;
+    background-position: top center;
+    background-repeat: no-repeat;
+    height: 100vh;
+    color: rgb(247, 248, 242);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+}
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Dark overlay */
+    z-index: -1;
+}
+
+.hero .btn-container {
+    display: flex;
+    gap: 10px;
+}
+
+.hero h1 {
+    font-size: 3rem;
+}
+
+.hero p {
+    font-size: 1.5rem;
+}
+
+/* Newsletter Section */
+.newsletter {
+    background-color: #f5f5f5;
+    padding: 30px;
+    text-align: center;
+    margin: 30px 0;
+}
+
+.newsletter h2 {
+    color: #006633; /* Green */
+}
+
+.newsletter form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.newsletter input[type="email"] {
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+}
+
+/* Footer Section */
+.green-background {
+    background-color: #006633;
+    color: #fff;
+    text-align: center;
+    padding: 15px 0;
+}
+
+/* Media Query for Smaller Screens */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .hero {
+        background-size: contain;
+    }
+    .hero h1 {
+        font-size: 2rem; /* Make the title smaller */
+        margin-bottom: 20px; /* Add spacing below the title */
+    }
+
+    .hero p {
+        font-size: 1.2rem;
+        margin-bottom: 30px; /* Add space between text and buttons */
+    }
+
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .btn-container {
+        flex-direction: column;
+    }
+
+    .btn, .btn-container button {
+        width: 100%;
+        margin: 10px 0;
+    }
+
+    .menu-grid {
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /* Adjust grid for smaller screens */
+    }
+}
+
+/* Specific styling for the Sign-Up Button */
+.sign-up-btn {
+    background-color: #000000; /* Original black background */
+    color: #249F26; /* Green text color */
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease, transform 0.2s ease;
+}
+
+/* Hover effect for the Sign-Up Button */
+.sign-up-btn:hover {
+    background-color: #FFBF00; /* Yellow background */
+    color: #000000; /* Black text */
+    transform: scale(1.05); /* Slight scale-up effect */
+}
+
+/* Menu Page Styles */
+.menu {
+    padding: 20px;
+    background-color: #f4f4f4;
+}
+
+.menu h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+}
+
+.menu-category {
+    margin-bottom: 40px;
+}
+
+.menu-category h3 {
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+    text-align: center;
+    color: #006633; /* Green */
+}
+
+/* Menu Grid */
+.menu-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); /* Automatically adjusts the grid size */
+    gap: 20px;
+    justify-items: center;
+}
+
+.menu-item {
+    background-color: white;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 100%;
+    max-width: 280px;
+    padding: 20px;
+    transition: transform 0.2s ease;
+    position: relative;
+    margin: 10px;
+    border-radius: 8px;
+    overflow: hidden;
+    
+}
+
+/* Vanilla Smoothies (Van) */
+.Van {
+    background-color: #F3E5AB; /* Light Vanilla color */
+}
+
+.Van .menu-title {
+    color: #2C3E50; /* Dark text for visibility */
+}
+
+.Van .menu-price {
+    color: #8E44AD; /* Purple price text for contrast */
+}
+
+/* Chocolate Smoothies (Choco) */
+.Choco {
+    background-color: #765535; /* Chocolate brown color */
+}
+
+.Choco .menu-title {
+    color: #FFFF; /* White text for contrast */
+}
+
+.Choco .menu-price {
+    color: #D35400; /* Orange for price text */
+}
+
+/* Peanut Butter Smoothies (PB) */
+.PB {
+    background-color: #D39C2B; /* Peanut butter golden color */
+}
+
+.PB .menu-title {
+    color: #FFF; /* White text for readability */
+}
+
+.PB .menu-price {
+    color: #C0392B; /* Red color for price text */
+}
+
+
+.menu-item:hover {
+    transform: scale(1.05);
+}
+
+.menu-image {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 8px;
+    border-bottom: 4px solid #ddd;
+}
+
+.menu-content {
+    margin-top: 15px;
+    padding: 10px;
+    text-align: center;
+}
+
+.menu-title {
+    font-size: 18px;
+    font-weight: bold;
+    margin: 10px 0;
+}
+
+.menu-description {
+    font-size: 14px;
+    color: #030505;
+}
+
+.menu-price {
+    font-size: 16px;
+    font-weight: bold;
+    color: #767474;
+}
+.carousel {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+}
+
+.carousel-items {
+    display: flex;
+    overflow-x: scroll;
+    scroll-behavior: smooth;
+}
+
+.menu-item {
+    min-width: 300px; /* Width of each carousel item */
+    margin-right: 20px;
+}
+/* Tea section header */
+.menu-category h3.Tea {
+    background-color: #ffcccb;
+    padding: 10px;
+    color: #333;
+}
+
+/* Specialty section header */
+.menu-category h3.SP {
+    background-color: #f0e68c;
+    padding: 10px;
+    color: #333;
+}
+
+/* Coffee section header */
+.menu-category h3.Coffe {
+    background-color: #d2b48c;
+    padding: 10px;
+    color: #333;
+}
+
+/* Menu item in Tea, Specialty, and Coffee */
+.menu-item.Tea {
+    background-color: #ffe4e1; /* A lighter pink for tea items */
+}
+
+.menu-item.SP {
+    background-color: #fffacd; /* Light lemon background for specialty drinks */
+}
+
+.menu-item.Coffe {
+    background-color: #f5deb3; /* Wheat color for coffee */
+}
+.btn:focus, .sign-up-btn:focus {
+    outline: 2px solid #FFBF00;
+}
+.newsletter input[type="email"]:focus {
+    border-color: #249F26;
+    outline: none;
+}
+
+
+button.prev, button.next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    z-index: 10;
+}
+
+button.prev {
+    left: 10px;
+}
+
+button.next {
+    right: 10px;
+}
+
+/* Cart Section */
+.cart-container {
+    background-color: #fff;
+    position: relative;
+    top: 20px;
+    right: 2px;
+    width: 300px;
+    padding: 15px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    z-index: 100;
+    max-height: 80vh;
+    overflow-y: auto;
+    transition: all 0.3s ease;
+}
+
+/* Cart Modal Styles */
+.cart-modal {
+    display: none; /* Hidden by default */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent overlay */
+    z-index: 1000;
+    justify-content: center;
+    align-items: center;
+}
+.cart-container {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    max-width: 400px;
+    width: 100%;
+    max-height: 80%;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    overflow-y: auto;
+}
+.cart-btn {
+    background-color: #249F26;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.cart-btn:hover {
+    background-color: #FFBF00;
+}
+/* Close Button for the Modal */
+.close-cart-btn {
+    background-color: #FF0000;
+    color: white;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.close-cart-btn:hover {
+    background-color: #D30000;
+}
+
+.cart {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background-color: #fff;
+    padding: 15px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+.cart-title {
+    color: #fff;
+}
+
+.cart-items {
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #ddd;
+}
+.cart-total {
+    font-weight: bold;
+    color: #ffffff;
+  }
+
+.remove-btn {
+    background-color: #FF0000;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    border-radius: 3px;
+    padding: 5px 10px;
+    font-size: 12px;
+}
+
+.checkout-btn {
+    background-color: green;
+    color: white;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+  }
+  .checkout-title {
+    color: #fff;
+  }
+  .checkout-label {
+    color: #fff;
+  }
+  .exit-btn {
+    background-color: #f44336; /* Red color for "Exit" button */
+    color: white;
+    padding: 12px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 100px;
+    text-align: center;
+    transition: background-color 0.3s;
+  }
+  .exit-btn:hover {
+    background-color: #e53935;
+  }
+
+/* Style for Error Message */
+#error-message {
+    color: red;
+    display: none;
+}
+
+footer.green-background {
+    background-color: #006400;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+footer a {
+    color: white;
+    text-decoration: none;
+    font-size: 14px;
+}
+/* Filter Section */.filter-options {
+
+    display: flex;
+
+    justify-content: center;
+    
+    align-items: center;
+    
+    gap: 15px;
+    
+    margin: 20px 0;
+    
+    background-color: #fff;
+    
+    padding: 10px 0;
+    
+    border-radius: 8px;
+    
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    
+    }.filter-btn {
+    
+    padding: 10px 20px;
+    
+    background-color: #006633;
+    
+    color: #fff;
+    
+    font-size: 16px;
+    
+    border: none;
+    
+    border-radius: 5px;
+    
+    cursor: pointer;
+    
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    
+    }.filter-btn:hover {
+    
+    background-color: #FFBF00;
+    
+    color: #000;
+    
+    transform: scale(1.05);
+    
+    }.filter-btn:focus {
+    
+    outline: 2px solid #FFBF00;
+    
+    }/* Menu Section Styling */.menu {
+    
+    padding: 20px;
+    
+    background-color: #f4f4f4;
+    }
+
+    

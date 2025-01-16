@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="SKYHY Nutrition Lounge offers nutritious drinks like smoothies, teas, and coffee. Start your healthy journey today.">
+    <title>SKYHY Nutrition Lounge | Nutritious Drinks</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <nav>
+            <!-- Logo Link -->
+            <a href="index.html" class="logo">
+                <img src="assets/Skyhy_logo.svg" alt="SKYHY Nutrition Lounge Logo">
+            </a>
+    
+            <!-- Navigation Menu -->
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="menu.html">Menu</a></li>
+            </ul>
+    
+            <!-- Sign Up / Login Button -->
+            <button class="btn sign-up-btn" aria-label="Sign up or login to your account" id="open-modal-btn">Sign Up / Login</button>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <h1>START YOUR ORDER</h1>
+        <p>What are you in for today?</p>
+        <div class="btn-container">
+            <a href="menu.html"><button class="btn">Pick Up</button></a>
+            <a href="menu.html"><button class="btn">Delivery</button></a> 
+        </div>
+    </section>
+
+    <section class="newsletter">
+        <h2>Sign up for Newsletters!</h2>
+        <p>Join our email list and be the first to know about great deals, product launches, events, and many more fun updates.</p>
+        <form id="newsletter-form">
+            <input type="email" id="newsletter-email" placeholder="Enter your email" required>
+            <button type="submit" class="btn">Subscribe</button>
+        </form>
+        <div id="error-message" style="color: red; display: none;">Please enter a valid email address.</div>
+    </section>
+
+    <section class="cart">
+        <div class="cart-items"></div>
+        <div class="cart-total"></div>
+    </section>
+
+    <footer class="green-background">
+        <p>&copy; 2024 SKYHY Nutrition Lounge</p>
+        <a href="mailto:contact@skyhynutrition.com" title="Send us an email">Contact Us</a>
+    </footer>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="Shopping Cart functionality.js"></script>
+    <script>
+        document.getElementById('newsletter-form').addEventListener('submit', function(e) {
+    e.preventDefault();
+    const email = document.getElementById('newsletter-email').value;
+    const errorMessage = document.getElementById('error-message');
+
+    // Basic email regex
+    const emailPattern = /^[^ ]+@[^ ]+\.[a-z]{2,3}$/;
+
+    if (!email.match(emailPattern)) {
+        errorMessage.style.display = 'block';
+    } else {
+        errorMessage.style.display = 'none';
+        alert('Thank you for subscribing!');
+        // Add code here to handle form submission, e.g., sending data to a server
+    }
+});
+    </script>
+</body>
+</html>

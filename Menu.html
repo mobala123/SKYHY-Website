@@ -1,0 +1,475 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="SKYHY Nutrition Lounge offers nutritious drinks like smoothies, teas, and coffee. Start your healthy journey today.">
+    <title>SKYHY Nutrition Lounge | Menu</title>
+    <link rel="stylesheet" href="style.css">
+    
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="index.html" class="logo">
+                <img src="assets/Skyhy_logo.svg" alt="SKYHY Nutrition Lounge Logo">
+            </a>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="menu.html">Menu</a></li>
+            </ul>
+            <button class="btn">Sign Up / Login</button>
+            <button class="cart-btn">View Cart</button>
+        </nav>
+    </header>
+   <!-- Cart Modal -->
+<div class="cart-modal">
+    <div class="cart-content">
+      <button class="close-cart-btn">X</button>
+      
+      <h2 class="cart-title">Your Cart</h2>
+      <div class="cart-items"></div> <!-- Cart items will go here -->
+      
+      <div class="cart-total"></div> <!-- Total price will go here -->
+      
+      <button class="checkout-btn">Proceed to Checkout</button>
+    </div>
+  </div>
+
+    <section class="menu">
+        <h2>Our Menu</h2>
+       
+
+        <!-- Filter Section -->
+<div class="filter-options">
+    <button class="filter-btn" data-category="all">All</button>
+    <button class="filter-btn" data-category="Smoothies">Smoothies</button>
+    <button class="filter-btn" data-category="Coffee">Coffee</button>
+    <button class="filter-btn" data-category="Tea">Tea</button>
+    <button class="filter-btn" data-category="Specialty">Specialty</button>
+</div>
+
+        <!-- Vanilla Smoothies Section (Carousel) -->
+        <div class="menu-category" data-category="Smoothies">
+            <h3>Vanilla Smoothies</h3>
+            <div class="carousel">
+                <button class="prev">←</button>
+                <div class="menu-grid carousel-items">
+                    <div class="menu-item Van">
+                        <img src="assets/animal cookie.jpeg" alt="Animal Cookie" class="menu-image">
+                        <div class="menu-content">
+                            <h4 class="menu-title">Animal Cookie</h4>
+                            <p class="menu-description">Vanilla base with a cookie crunch</p>
+                            <p class="menu-price">$8.00</p>
+                            <button class="add-to-cart-btn" data-name="Animal Cookie" data-price="8.00" id="add-to-cart-Animal-Cookie">Add to Cart</button>
+                        </div>
+                    </div>
+                    <div class="menu-item Van">
+                        <img src="assets/belgian3.jpeg" alt="Belgian Waffle" class="menu-image">
+                        <div class="menu-content">
+                            <h4 class="menu-title">Belgian Waffle</h4>
+                            <p class="menu-description">Sweet Belgian waffles blended into a smoothie</p>
+                            <p class="menu-price">$8.00</p>
+                            <button class="add-to-cart-btn" data-name="Belgian Waffle" data-price="8.00" id="add-to-cart-Belgian-Waffle">Add to Cart</button>
+                        </div>
+                    </div>
+                    <div class="menu-item Van">
+                        <img src="assets/birthdaycake.jpeg" alt="Birthday Cake" class="menu-image">
+                        <div class="menu-content">
+                            <h4 class="menu-title">Birthday Cake</h4>
+                            <p class="menu-description">A cake-inspired smoothie with vanilla base</p>
+                            <p class="menu-price">$8.00</p>
+                            <button class="add-to-cart-btn" data-name="Birthday Cake" data-price="8.00" id="add-to-cart-Birthday-Cake">Add to Cart</button>
+                        </div>
+                    </div>
+                    <div class="menu-item Van">
+                        <img src="assets/cookies and cream.jpeg" alt="Cookies & Cream" class="menu-image">
+                        <div class="menu-content">
+                            <h4 class="menu-title">Cookies & Cream</h4>
+                            <p class="menu-description">Vanilla base with a cookies and cream twist</p>
+                            <p class="menu-price">$8.00</p>
+                            <button class="add-to-cart-btn" data-name="Cookies & Cream" data-price="8.00" id="add-to-cart-Cookies-&-Cream">Add to Cart</button>
+                        </div>
+                    </div>
+                    <div class="menu-item Van">
+                        <img src="assets/lucky charms.jpeg" alt="Lucky Charms" class="menu-image">
+                        <div class="menu-content">
+                            <h4 class="menu-title">Lucky Charms</h4>
+                            <p class="menu-description">Vanilla base with cereal marshmallows</p>
+                            <p class="menu-price">$8.00</p>
+                            <button class="add-to-cart-btn" data-name="Lucky Charms" data-price="8.00" id="add-to-cart-Lucky-Charms">Add to Cart</button>
+                        </div>
+                    </div>
+                    <div class="menu-item Van">
+                        <img src="assets/mint chocolate.jpeg" alt="Mint Chocolate" class="menu-image">
+                        <div class="menu-content">
+                            <h4 class="menu-title">Mint Chocolate</h4>
+                            <p class="menu-description">Minty vanilla base with chocolate chunks</p>
+                            <p class="menu-price">$8.00</p>
+                            <button class="add-to-cart-btn" data-name="Mint Chocolate" data-price="8.00" id="add-to-cart-Mint-Chocolate">Add to Cart</button>
+                        </div>
+                    </div>
+                </div>
+                <button class="next">→</button>
+            </div>
+        </div>
+
+        <!-- Chocolate Smoothies Section (Carousel) -->
+        <div class="menu-category" data-category="Smoothies">
+            <h3>Chocolate Smoothies</h3>
+            <div class="carousel">
+                <button class="prev">←</button>
+                <div class="menu-grid carousel-items">
+                    <div class="menu-item Choco">
+                        <img src="assets/brownie batter.jpeg" alt="Brownie Batter" class="menu-image">
+                        <div class="menu-content">
+                            <h4 class="menu-title">Brownie Batter</h4>
+                            <p class="menu-description">Rich chocolate brownie base with a smooth texture</p>
+                            <p class="menu-price">$8.00</p>
+                            <button class="add-to-cart-btn" data-name="Brownie Batter" data-price="8.00" id="add-to-cart-Brownie-Batter">Add to Cart</button>
+                        </div>
+                    </div>
+                    <div class="menu-item Choco">
+                        <img src="assets/chocolate donut.jpeg" alt="Chocolate Donut" class="menu-image">
+                        <div class="menu-content">
+                            <h4 class="menu-title">Chocolate Donut</h4>
+                            <p class="menu-description">Chocolate donut flavor with a sweet finish</p>
+                            <p class="menu-price">$8.00</p>
+                            <button class="add-to-cart-btn" data-name="Chocolate Donut" data-price="8.00" id="add-to-cart-Chocolate-Donut">Add to Cart</button>
+                        </div>
+                    </div>
+                    <div class="menu-item Choco">
+                        <img src="assets/Oreo smores.jpeg" alt="Oreo S'mores" class="menu-image">
+                        <div class="menu-content">
+                            <h4 class="menu-title">Oreo S’mores</h4>
+                            <p class="menu-description">Oreo cookies and toasted marshmallow</p>
+                            <p class="menu-price">$8.00</p>
+                            <button class="add-to-cart-btn" data-name="Oreo S'mores" data-price="8.00" id="add-to-cart-Oreo-S'mores">Add to Cart</button>
+                        </div>
+                    </div>
+                    <div class="menu-item Choco">
+                        <img src="assets/Butter finger.jpeg" alt="Butterfinger" class="menu-image">
+                        <div class="menu-content">
+                            <h4 class="menu-title">Butterfinger</h4>
+                            <p class="menu-description">Chocolate base with crushed Butterfinger candy</p>
+                            <p class="menu-price">$8.00</p>
+                            <button class="add-to-cart-btn" data-name="Butterfinger" data-price="8.00" id="add-to-cart-Butterfinger">Add to Cart</button>
+                        </div>
+                    </div>
+                    <div class="menu-item Choco">
+                        <img src="assets/cosmic brownie.jpeg" alt="Cosmic Brownie" class="menu-image">
+                        <div class="menu-content">
+                            <h4 class="menu-title">Cosmic Brownie</h4>
+                            <p class="menu-description">Chocolate base with brownie pieces</p>
+                            <p class="menu-price">$8.00</p>
+                            <button class="add-to-cart-btn" data-name="Cosmic Brownie" data-price="8.00" id="add-to-cart-Cosmic-Brownie">Add to Cart</button>
+                        </div>
+                    </div>
+                    <div class="menu-item Choco">
+                        <img src="assets/Fudge sickle.jpeg" alt="Fudge Sickle" class="menu-image">
+                        <div class="menu-content">
+                            <h4 class="menu-title">Fudge Sickle</h4>
+                            <p class="menu-description">Chocolate and fudge base for a rich taste</p>
+                            <p class="menu-price">$8.00</p>
+                            <button class="add-to-cart-btn" data-name="Fudge Sickle" data-price="8.00" id="add-to-cart-Fudge-Sickle">Add to Cart</button>
+                        </div>
+                    </div>
+                    <div class="menu-item Choco">
+                        <img src="assets/Milky way.jpeg" alt="Milky Way" class="menu-image">
+                        <div class="menu-content">
+                            <h4 class="menu-title">Milky Way</h4>
+                            <p class="menu-description">Chocolate base with caramel and nougat</p>
+                            <p class="menu-price">$8.00</p>
+                            <button class="add-to-cart-btn" data-name="Milky Way" data-price="8.00" id="add-to-cart-Milky-Way">Add to Cart</button>
+                        </div>
+                    </div>
+                </div>
+                <button class="next">→</button>
+            </div>
+        </div>
+
+        <!-- Peanut Butter Smoothies Section (Carousel) -->
+        <div class="menu-category" data-category="Smoothies">
+            <h3>Peanut Butter Smoothies</h3>
+            <div class="carousel">
+                <button class="prev">←</button>
+                <div class="menu-grid carousel-items">
+                    <div class="menu-item PB">
+                        <img src="assets/captain crunch.jpeg" alt="Captain Crunch" class="menu-image">
+                        <div class="menu-content">
+                            <h4 class="menu-title">Captain Crunch</h4>
+                            <p class="menu-description">Peanut butter with crunchy cereal pieces</p>
+                            <p class="menu-price">$8.00</p>
+                            <button class="add-to-cart-btn" data-name="Captain Crunch" data-price="8.00" id="add-to-cart-Captain-Crunch">Add to Cart</button>
+                        </div>
+                    </div>
+                    <div class="menu-item PB">
+                        <img src="assets/Puppy chow.jpeg" alt="Puppy Chow" class="menu-image">
+                        <div class="menu-content">
+                            <h4 class="menu-title">Puppy Chow</h4>
+                            <p class="menu-description">Sweet peanut butter and chocolate mix</p>
+                            <p class="menu-price">$8.00</p>
+                            <button class="add-to-cart-btn" data-name="Puppy Chow" data-price="8.00" id="add-to-cart-Puppy-chow">Add to Cart</button>
+                        </div>
+                    </div>
+                    <div class="menu-item PB">
+                        <img src="assets/Peanut Butter Cookie.jpeg" alt="Peanut Butter Cookie" class="menu-image">
+                        <div class="menu-content">
+                            <h4 class="menu-title">Peanut Butter Cookie</h4>
+                            <p class="menu-description">Classic peanut butter flavor with a cookie twist</p>
+                            <p class="menu-price">$8.00</p>
+                            <button class="add-to-cart-btn" data-name="Peanut Butter Cookie" data-price="8.00" id="add-to-cart-Peanut-Butter-Cookie">Add to Cart</button>
+                        </div>
+                    </div>
+                    <div class="menu-item PB">
+                        <img src="assets/white chocolate snicker.jpeg" alt="White Chocolate Snicker" class="menu-image">
+                        <div class="menu-content">
+                            <h4 class="menu-title">White Chocolate Snicker</h4>
+                            <p class="menu-description">Peanut butter and white chocolate blended</p>
+                            <p class="menu-price">$8.00</p>
+                            <button class="add-to-cart-btn" data-name="White Chocolate Snicker" data-price="8.00" id="add-to-cart-White-Chocolate-Snicker">Add to Cart</button>
+                        </div>
+                    </div>
+                    <div class="menu-item PB">
+                        <img src="assets/Peanut Butter pancake.jpeg" alt="Peanut Butter Pancake" class="menu-image">
+                        <div class="menu-content">
+                            <h4 class="menu-title">Peanut Butter Pancake</h4>
+                            <p class="menu-description">Peanut butter and pancake syrup in one</p>
+                            <p class="menu-price">$8.00</p>
+                            <button class="add-to-cart-btn" data-name="Peanut Butter Pancake" data-price="8.00" id="add-to-cart-Peanut-Buttter-Pancake">Add to Cart</button>
+                        </div>
+                    </div>
+                    <div class="menu-item PB">
+                        <img src="assets/Nutter Butter.jpeg" alt="Nutter Butter" class="menu-image">
+                        <div class="menu-content">
+                            <h4 class="menu-title">Nutter Butter</h4>
+                            <p class="menu-description">Peanut butter and Nutter Butter cookie flavor</p>
+                            <p class="menu-price">$8.00</p>
+                            <button class="add-to-cart-btn" data-name="Nutter Butter" data-price="8.00" id="add-to-cart-Nutter-Butter">Add to Cart</button>
+                        </div>
+                    </div>
+                </div>
+                <button class="next">→</button>
+            </div>
+        </div>
+
+        <!-- Tea Flavors Section (Carousel) -->
+        <div class="menu-category" data-category="Tea">
+            <h3>Tea Flavors</h3>
+            <div class="carousel">
+                <button class="prev">←</button>
+                <div class="menu-grid carousel-items">
+                    <div class="menu-item Tea">
+                        <div class="menu-content">
+                            <h4 class="menu-title">Orange</h4>
+         <div>               
+                            <label for="size">Size:</label>
+        
+            <select class="size-select" data-name="Orange">
+                <option value="Large" data-price="5.00">Large - $5.00</option>
+                <option value="Mega" data-price="7.00">Mega - $7.00</option>
+            </select>
+        </div>
+        <button class="add-to-cart-btn" data-name="Orange" id="add-to-cart-Orange">Add to Cart</button>
+                        </div>
+                    </div>
+                    <div class="menu-item Tea">
+                        <div class="menu-content">
+                            <h4 class="menu-title">Pomegranate</h4>
+         <div>                    
+                            <label for="size">Size:</label>
+       
+            <select class="size-select" data-name="Pomegranate">
+                <option value="Large" data-price="5.00">Large - $5.00</option>
+                <option value="Mega" data-price="7.00">Mega - $7.00</option>
+            </select>
+        </div>
+        <button class="add-to-cart-btn" data-name="Pomegranate" id="add-to-cart-Pomegranate">Add to Cart</button>
+                        </div>
+                    </div>
+                    <div class="menu-item Tea">
+                        <div class="menu-content">
+                            <h4 class="menu-title">Lemon Lime</h4>
+                            
+                    <div>
+                            <label for="size">Size:</label>
+            <select class="size-select" data-name="Lemon Lime">
+                <option value="Large" data-price="5.00">Large - $5.00</option>
+                <option value="Mega" data-price="7.00">Mega - $7.00</option>
+            </select>
+        </div>
+        <button class="add-to-cart-btn" data-name="Lemon Lime" id="add-to-cart-Lemon-Lime">Add to Cart</button>
+                        </div>
+                    </div>
+                    <div class="menu-item Tea">
+                        <div class="menu-content">
+                            <h4 class="menu-title">Raspberry</h4>
+                            
+                    <div>
+                            <label for="size">Size:</label>
+            <select class="size-select" data-name="Raspberry">
+                <option value="Large" data-price="5.00">Large - $5.00</option>
+                <option value="Mega" data-price="7.00">Mega - $7.00</option>
+            </select>
+        </div>
+        <button class="add-to-cart-btn" data-name="Raspberry" id="add-to-cart-Raspberry">Add to Cart</button>
+                        </div>
+                    </div>
+                    <div class="menu-item Tea">
+                        <div class="menu-content">
+                            <h4 class="menu-title">Strawberry Margarita</h4>
+                            
+        <div>
+                            <label for="size">Size:</label>
+            <select class="size-select" data-name="Strawberry Margarita">
+                <option value="Large" data-price="5.00">Large - $5.00</option>
+                <option value="Mega" data-price="7.00">Mega - $7.00</option>
+            </select>
+        </div>
+        <button class="add-to-cart-btn" data-name="Strawberry Margarita" id="add-to-cart-Strawberry-Margarita">Add to Cart</button>
+                        </div>
+                    </div>
+                    <div class="menu-item Tea">
+                        <div class="menu-content">
+                            <h4 class="menu-title">Watermelon Jolly Rancher</h4>
+                            
+                    <div>
+                            <label for="size">Size:</label>
+            <select class="size-select" data-name="Watermelon Jolly Rancher">
+                <option value="Large" data-price="5.00">Large - $5.00</option>
+                <option value="Mega" data-price="7.00">Mega - $7.00</option>
+            </select>
+        </div>
+        <button class="add-to-cart-btn" data-name="Watermelon Jolly Rancher" id="add-to-cart-Watermelon-Jolly-Rancher">Add to Cart</button>
+                        </div>
+                    </div>
+                    <div class="menu-item Tea">
+                        <div class="menu-content">
+                            <h4 class="menu-title">Mango Mama</h4>
+                            
+            <div>
+                            <label for="size">Size:</label>
+            <select class="size-select" data-name="Mango Mama">
+                <option value="Large" data-price="5.00">Large - $5.00</option>
+                <option value="Mega" data-price="7.00">Mega - $7.00</option>
+            </select>
+        </div>
+        <button class="add-to-cart-btn" data-name="Mango Mama" id="add-to-cart-Mango-Mama">Add to Cart</button>
+                        </div>
+                    </div>
+                    <div class="menu-item Tea">
+                        <div class="menu-content">
+                            <h4 class="menu-title">Pineapple Paradise</h4>
+                            
+                        <div>
+                            <label for="size">Size:</label>
+                            <select class="size-select" data-name="Pineapple Paradise">
+                            <option value="Large" data-price="5.00">Large - $5.00</option>
+                            <option value="Mega" data-price="7.00">Mega - $7.00</option>
+                            </select>
+                        </div>
+        <button class="add-to-cart-btn" data-name="Pineapple Paradise" id="add-to-cart-Pineapple-Paradise">Add to Cart</button>
+                        </div>
+                    </div>
+                </div>
+                <button class="next">→</button>
+            </div>
+        </div>
+
+        <!-- Specialty Drinks Section (Carousel) -->
+        <div class="menu-category" data-category="Specialty">
+            <h3>Specialty Drinks</h3>
+            <div class="carousel">
+                <button class="prev">←</button>
+                <div class="menu-grid carousel-items">
+                    <div class="menu-item SP">
+                        <div class="menu-content">
+                            <h4 class="menu-title">Aloe Water (Acai Berry)</h4>
+                            <p class="menu-price">$6.00</p>
+                            <button class="add-to-cart-btn" data-name="Aloe Water (Acai Berry)" data-price="6.00" id="add-to-cart-Aloe-Water-Acai-Berry">Add to Cart</button>
+                        </div>
+                    </div>
+                    <div class="menu-item SP">
+                        <div class="menu-content">
+                            <h4 class="menu-title">Aloe Water (Pomegranate)</h4>
+                            <p class="menu-price">$6.00</p>
+                            <button class="add-to-cart-btn" data-name="Aloe Water (Pomegranate)" data-price="6.00" id="add-to-cart-Aloe-Water-Pomegranate">Add to Cart</button>
+                        </div>
+                    </div>
+                    <div class="menu-item SP">
+                        <div class="menu-content">
+                            <h4 class="menu-title">Electrolytes (CR7) Sports Drink (Mango)</h4>
+                            <p class="menu-price">$6.00</p>
+                            <button class="add-to-cart-btn" data-name=" Electrolytes (CR7))Sports Drink (Mango)" data-price="6.00" id="add-to-cart-CR7-Mango">Add to Cart</button>
+                        </div>
+                    </div>
+                    <div class="menu-item SP">
+                        <div class="menu-content">
+                            <h4 class="menu-title">Electrolytes (CR7) Sports Drink (Pineapple)</h4>
+                            <p class="menu-price">$6.00</p>
+                            <button class="add-to-cart-btn" data-name=" Electrolytes (CR7))Sports Drink (Pineapple)" data-price="6.00" id="add-to-cart-CR7-Pineapple">Add to Cart</button>
+                        </div>
+                    </div>
+                </div>
+                <button class="next">→</button>
+            </div>
+        </div>
+
+        <!-- Coffee Lover Section (Carousel) -->
+        <div class="menu-category" data-category="Coffee">
+            <h3>Coffee Lovers</h3>
+            <div class="carousel">
+                <button class="prev">←</button>
+                <div class="menu-grid carousel-items">
+                    <div class="menu-item Coffe">
+                        <div class="menu-content">
+                            <h4 class="menu-title">Café Latte</h4>
+                            <p class="menu-price">$6.00</p>
+                            <button class="add-to-cart-btn" data-name=" Cafè Latte" data-price="6.00">Add to Cart</button>
+                        </div>
+                    </div>
+                    <div class="menu-item Coffe">
+                        <div class="menu-content">
+                            <h4 class="menu-title">Café Mocha</h4>
+                            <p class="menu-price">$6.00</p>
+                            <button class="add-to-cart-btn" data-name=" Cafè Mocha" data-price="6.00" id="add-to-cart-Cafè-Mocha">Add to Cart</button>
+                        </div>
+                    </div>
+                    <div class="menu-item Coffe">
+                        <div class="menu-content">
+                            <h4 class="menu-title">Caramel Latte</h4>
+                            <p class="menu-price">$6.00</p>
+                            <button class="add-to-cart-btn" data-name=" Caramel Latte" data-price="6.00" id="add-to-Caramel-Latte">Add to Cart</button>
+                        </div>
+                    </div>
+                    <div class="menu-item Coffe">
+                        <div class="menu-content">
+                            <h4 class="menu-title">Caramel Mocha</h4>
+                            <p class="menu-price">$6.00</p>
+                            <button class="add-to-cart-btn" data-name=" Caramel Mocha" data-price="6.00" id="add-to-cart-Caramel-Mocha">Add to Cart</button>
+                        </div>
+                    </div>
+                    <div class="menu-item Coffe">
+                        <div class="menu-content">
+                            <h4 class="menu-title">Maple Pecan Latte</h4>
+                            <p class="menu-price">$6.00</p>
+                            <button class="add-to-cart-btn" data-name=" Maple Pecan Latte" data-price="6.00" id="add-to-cart-Maple-Pecan-Latte">Add to Cart</button>
+                        </div>
+                    </div>
+                    <div class="menu-item Coffe">
+                        <div class="menu-content">
+                            <h4 class="menu-title">Maple Pecan Mocha</h4>
+                            <p class="menu-price">$6.00</p>
+                            <button class="add-to-cart-btn" data-name=" Maple Pecan Mocha" data-price="6.00" id="add-to-cart-Maple-Pecan-Mocha">Add to Cart</button>
+                        </div>
+                    </div>
+                </div>
+                <button class="next">→</button>
+            </div>
+        </div>
+    </section>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="Shopping Cart functionality.js"></script>
+    <script src="sign up modal.js"></script>
+</body>
+</html>

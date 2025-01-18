@@ -4,6 +4,7 @@ body {
     margin: 0;
     padding: 0;
     background-color: #f0f0f0; /* Light gray background */
+    line-height: 1.6;
 }
 
 a {
@@ -20,6 +21,7 @@ ul {
 
 h1, h2, p {
     margin: 0.5em 0;
+    line-height: 1.4; 
 }
 
 /* Header */
@@ -79,6 +81,9 @@ nav ul li a {
     border-radius: 5px; /* Rounded corners for the link */
     transition: background-color 0.3s ease, color 0.3s ease;
 }
+nav ul li a:focus {
+    outline: 2px solid #FFBF00;
+}
 
 /* Hover effect for <a> inside <li> */
 nav ul li a:hover {
@@ -99,6 +104,22 @@ nav ul li a:hover {
 }
 
 .btn:hover, .btn-container button:hover {
+    background-color: #FFBF00;
+    color: #000000;
+    transform: scale(1.05); /* Slight scale-up effect */
+}
+
+.open-modal-btn {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #000000;
+    color: #249F26;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, color 0.3s ease, transform 0.2s ease;
+}
+.open-modal-btn:hover {
     background-color: #FFBF00;
     color: #000000;
     transform: scale(1.05); /* Slight scale-up effect */
@@ -132,6 +153,19 @@ nav ul li a:hover {
     color: #000;
     margin-bottom: 20px;
 }
+.close-modal-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: none;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+  }
+  button[type="submit"] {
+    margin-top: 10px;
+  }
+
 .form-group {
     margin-bottom: 20px;
     text-align: left;
@@ -141,6 +175,16 @@ nav ul li a:hover {
     margin-bottom: 5px;
     font-size: 14px;
     color: #333;
+}
+.signup-modal-btn {
+    background-color: #000000;
+    color: #249F26;
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease, transform 0.2s ease;
 }
 
 .form-group input {
@@ -185,19 +229,15 @@ nav ul li a:hover {
     color: #000000;
     transform: scale(1.05);
 }
-
-/* Modal Overlay Hidden by Default */
-.modal-overlay {
-    display: none; /* Modal hidden */
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: rgba(0, 0, 0, 0.5);
-    justify-content: center;
-    align-items: center;
-}
+.sign-up-content {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    position: relative;
+    width: 400px;
+    max-width: 100%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
 .modal-overlay.show {
     display: flex; /* Modal is now visible */
 }
@@ -246,6 +286,7 @@ nav ul li a:hover {
 
 .hero h1 {
     font-size: 3rem;
+    
 }
 
 .hero p {
@@ -322,7 +363,13 @@ nav ul li a:hover {
     .menu-grid {
         grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /* Adjust grid for smaller screens */
     }
+    .modal-content {
+        max-width: 90%; /* Ensure it doesn't stretch too wide */
+    }
+
 }
+
+
 
 /* Specific styling for the Sign-Up Button */
 .sign-up-btn {
@@ -441,6 +488,7 @@ nav ul li a:hover {
     object-fit: cover;
     border-radius: 8px;
     border-bottom: 4px solid #ddd;
+    object-fit: cover;
 }
 
 .menu-content {
@@ -558,6 +606,12 @@ button.next {
     overflow-y: auto;
     transition: all 0.3s ease;
 }
+@media (max-width: 768px) {
+    .cart-container {
+        width: 100%;
+        padding: 10px;
+    }
+}
 
 /* Cart Modal Styles */
 .cart-modal {
@@ -592,6 +646,12 @@ button.next {
 }
 .cart-btn:hover {
     background-color: #FFBF00;
+}
+.cart-btn:focus {
+    outline: 2px solid #FFBF00;
+}
+.btn:active, .sign-up-btn:active {
+    transform: scale(0.98); /* Slight scale down effect when clicked */
 }
 /* Close Button for the Modal */
 .close-cart-btn {

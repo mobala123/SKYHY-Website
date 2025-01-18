@@ -6,6 +6,7 @@
     <meta name="description" content="SKYHY Nutrition Lounge offers nutritious drinks like smoothies, teas, and coffee. Start your healthy journey today.">
     <title>SKYHY Nutrition Lounge | Nutritious Drinks</title>
     <link rel="stylesheet" href="style.css">
+    
 </head>
 <body>
 
@@ -24,9 +25,29 @@
     
             <!-- Sign Up / Login Button -->
             <button class="btn sign-up-btn" aria-label="Sign up or login to your account" id="open-modal-btn">Sign Up / Login</button>
+            <div id="modal" class="modal">
+                <div class="sign-up-content">
+                  <button id="close-modal-btn" class="close-modal-btn">X</button>
+                  <h2>Sign Up or Login</h2>
+                  <!-- Your sign-up form or login form goes here -->
+                  <form id="signup-form">
+                    <div>
+                      <label for="email">Email:</label>
+                      <input type="email" id="email" name="email" required>
+                    </div>
+                    <div>
+                      <label for="password">Password:</label>
+                      <input type="password" id="password" name="password" required>
+                    </div>
+                    <button type="submit">Sign Up</button>
+                    <p>Already have an account? <a href="#">Login</a></p>
+                  </form>
+                </div>
+              </div>
+            
         </nav>
     </header>
-
+        
     <section class="hero">
         <h1>START YOUR ORDER</h1>
         <p>What are you in for today?</p>
@@ -75,5 +96,9 @@
     }
 });
     </script>
+    <script src="sign up modal.js"></script>
+    <Script>
+        document.getElementById('open-modal-btn').addEventListener('click', openModal);
+    </Script>
 </body>
 </html>
